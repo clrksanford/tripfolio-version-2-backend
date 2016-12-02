@@ -59,6 +59,8 @@ router.post('/', function (req, res, next) {
     'public'
   ]);
 
+  req.body.destination = req.body.destination.toLowerCase();
+
   var newTrip = new Trip(req.body);
 
   newTrip.save(function (err) {

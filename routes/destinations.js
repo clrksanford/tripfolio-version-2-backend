@@ -5,10 +5,11 @@ var _ = require('lodash');
 
 /* GET other users' trips by destination */
 router.get('/:cityName', function (req, res, next) {
-  Trip.find(req.params.cityName, function (error, trips) {
+  console.log(req.params.cityName);
+  Trip.find({destination: req.params.cityName}, function (error, trips) {
     if(error) {
       res.status(500).send();
-    } else if (!trip) {
+    } else if (!trips) {
       res.status(404).send();
     } else {
       res.json(trips);

@@ -67,7 +67,7 @@ router.post('/', function (req, res, next) {
     if (err) {
       res.status(500).send();
     } else {
-      res.status(202).send();
+      res.json(newTrip);
     }
   });
 });

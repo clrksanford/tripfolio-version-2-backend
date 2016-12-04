@@ -52,8 +52,8 @@ router.delete('/:tripId', function (req, res, next) {
 router.post('/', function (req, res, next) {
 
   req.body = _.pick(req.body, [
-    'creatorUsername',
     'creatorId',
+    'creatorUsername',
     'destination',
     'pointsOfInterest',
     'public'

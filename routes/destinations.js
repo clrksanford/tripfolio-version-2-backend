@@ -6,7 +6,6 @@ var _ = require('lodash');
 /* GET other users' trips by destination */
 router.get('/:cityName', function (req, res, next) {
   var cityName = req.params.cityName.toLowerCase();
-  console.log(cityName);
 
   Trip.find({destination: cityName}, function (error, trips) {
     if(error) {

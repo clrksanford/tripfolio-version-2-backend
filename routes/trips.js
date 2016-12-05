@@ -59,9 +59,14 @@ router.post('/', function (req, res, next) {
     'public'
   ]);
 
+  // Normalize destination capitalization to optimize searches
   req.body.destination = req.body.destination.toLowerCase();
 
+  // Create new trip with user params
   var newTrip = new Trip(req.body);
+
+  // Add destination formatted for URL as another key/value pair
+  newTrip.destForURL = _.startCase(req.body.destination).replace(/ /g, '-');
 
   newTrip.save(function (err) {
     if (err) {

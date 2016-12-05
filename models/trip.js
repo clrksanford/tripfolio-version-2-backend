@@ -4,6 +4,7 @@ var tripSchema = mongoose.Schema ({
   creatorUsername: String,
   creatorId: String,
   destination: String,
+  destForURL: String,
   pointsOfInterest: Object,
   public: Boolean
 });

@@ -26,7 +26,7 @@ app.use(cors());
 app.use('/', routes);
 app.use('/trips', trips);
 app.use('/destinations', destinations);
-app.use('/travelTiles', travelTiles);
+app.use('/travel-tiles', travelTiles);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

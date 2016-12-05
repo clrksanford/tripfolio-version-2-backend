@@ -3,19 +3,47 @@ var router = express.Router();
 var TravelTile = require('../models/travelTile');
 var _ = require('lodash');
 
-
-/* GET tiles */
-router.get('/', function (req, res, next) {
-  TravelTile.find({}, function (error, tiles) {
+/* Find individual tile by Id */
+router.use('/:tileId', function (req, res, next) {
+  TravelTile.findById(req.params.tileId, function (error, tile) {
     if(error) {
       res.status(500).send();
-    } else if (!tiles) {
+    } else if (!tile) {
       res.status(404).send();
     } else {
-      res.json(tiles);
+      res.tile = tile;
+      next();
     }
   })
 })
+
+/* GET individual trip */
+router.get('/:tileId', function(req, res, next) {
+  res.json(res.tile);
+});
+
+/* UPDATE tile */
+router.put('/:tileId', function (req, res, next) {
+  req.body = _.pick(req.body, [
+    'name',
+    'image',
+    'notes',
+    'address',
+    'openingHours',
+    'entrance',
+    'transit'
+  ]);
+
+  var updatedTile = Object.assign(res.tile, req.body);
+
+  updatedTile.save(function (err) {
+    if (err) {
+      res.status(500).send();
+    } else {
+      res.json(updatedTile);
+    }
+  });
+});
 
 /* POST new tile */
 router.post('/', function (req, res, next) {

@@ -3,6 +3,20 @@ var router = express.Router();
 var TravelTile = require('../models/travelTile');
 var _ = require('lodash');
 
+
+/* GET tiles */
+router.get('/', function (req, res, next) {
+  TravelTile.find({}, function (error, tiles) {
+    if(error) {
+      res.status(500).send();
+    } else if (!tiles) {
+      res.status(404).send();
+    } else {
+      res.json(tiles);
+    }
+  })
+})
+
 /* POST new tile */
 router.post('/', function (req, res, next) {
 

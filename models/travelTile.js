@@ -3,6 +3,45 @@ var mongoose = require('mongoose');
 var travelTileSchema = mongoose.Schema({
   name: {type: String, required: true},
   image: {type: String, required: false},
+
+  /*--- BEGIN ADDRESS ---*/
+
+  address: {
+    street1: String,
+    street2: String,
+    city: String,
+    country: String,
+    zip: String,
+    phone: String
+  }, // End address
+
+  /*--- BEGIN ENTRANCE ---*/
+
+  entrance: {
+    entrance1: {
+      label: String,
+      price: Number
+    },
+    entrance2: {
+      label: String,
+      price: Number
+    },
+    entrance3: {
+      label: String,
+      price: Number
+    }
+    entrance4: {
+      label: String,
+      price: Number
+    }
+    entrance5: {
+      label: String,
+      price: Number
+    }
+  }, // End entrance
+
+  /*--- BEGIN OPENING HOURS ---*/
+
   openingHours: {
     day1: {
       closed: Boolean,
@@ -68,28 +107,9 @@ var travelTileSchema = mongoose.Schema({
       to3: Number
     }
   }, // End openingHours
-  entrance: {
-    entrance1: {
-      label: String,
-      price: Number
-    },
-    entrance2: {
-      label: String,
-      price: Number
-    },
-    entrance3: {
-      label: String,
-      price: Number
-    }
-    entrance4: {
-      label: String,
-      price: Number
-    }
-    entrance5: {
-      label: String,
-      price: Number
-    }
-  }, // End entrance
+
+  /*--- BEGIN TRANSIT ---*/
+
   transit: {
     notes: String,
     link1: {
@@ -112,15 +132,7 @@ var travelTileSchema = mongoose.Schema({
       name: String,
       url: String
     }
-  }, // End transit
-  address: {
-    street1: String,
-    street2: String,
-    city: String,
-    country: String,
-    zip: String,
-    phone: String
-  }
+  } // End transit
 });
 
 var TravelTile = mongoose.model('TravelTile', travelTileSchema);

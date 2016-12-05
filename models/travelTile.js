@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var travelTileSchema = mongoose.Schema({
   name: {type: String, required: true},
   image: String,
+  notes: String,
 
   /*--- BEGIN ADDRESS ---*/
 

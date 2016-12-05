@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var travelTileSchema = mongoose.Schema({
+  creatorId: {type: String, required: true},
   name: {type: String, required: true},
   image: String,
   notes: String,

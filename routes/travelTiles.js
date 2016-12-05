@@ -50,6 +50,7 @@ router.post('/', function (req, res, next) {
 
   req.body = _.pick(req.body, [
     'address',
+    'creatorId',
     'entrance',
     'image',
     'name',

@@ -29,11 +29,11 @@ var travelTileSchema = mongoose.Schema({
     entrance3: {
       label: String,
       price: Number
-    }
+    },
     entrance4: {
       label: String,
       price: Number
-    }
+    },
     entrance5: {
       label: String,
       price: Number
@@ -51,7 +51,7 @@ var travelTileSchema = mongoose.Schema({
       to2: Number,
       from3: Number,
       to3: Number
-    }
+    },
     day2: {
       closed: Boolean,
       from1: Number,
@@ -60,7 +60,7 @@ var travelTileSchema = mongoose.Schema({
       to2: Number,
       from3: Number,
       to3: Number
-    }
+    },
     day3: {
       closed: Boolean,
       from1: Number,
@@ -69,7 +69,7 @@ var travelTileSchema = mongoose.Schema({
       to2: Number,
       from3: Number,
       to3: Number
-    }
+    },
     day4: {
       closed: Boolean,
       from1: Number,
@@ -78,7 +78,7 @@ var travelTileSchema = mongoose.Schema({
       to2: Number,
       from3: Number,
       to3: Number
-    }
+    },
     day5: {
       closed: Boolean,
       from1: Number,
@@ -87,7 +87,7 @@ var travelTileSchema = mongoose.Schema({
       to2: Number,
       from3: Number,
       to3: Number
-    }
+    },
     day6: {
       closed: Boolean,
       from1: Number,
@@ -96,7 +96,7 @@ var travelTileSchema = mongoose.Schema({
       to2: Number,
       from3: Number,
       to3: Number
-    }
+    },
     day7: {
       closed: Boolean,
       from1: Number,

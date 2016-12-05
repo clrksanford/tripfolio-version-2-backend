@@ -34,7 +34,7 @@ router.post('/', function (req, res, next) {
 
   newTravelTile.save(function (err) {
     if (err) {
-      res.status(500).send();
+      res.status(500).send(err);
     } else {
       res.json(newTravelTile);
     }

@@ -12,6 +12,7 @@ mongoose.connect(process.env.DB_CONN);
 var routes = require('./routes/index');
 var trips = require('./routes/trips');
 var destinations = require('./routes/destinations');
+var travelTiles = require('./routes/travelTiles');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(cors());
 app.use('/', routes);
 app.use('/trips', trips);
 app.use('/destinations', destinations);
+app.use('/travelTiles', travelTiles);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

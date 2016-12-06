@@ -45,6 +45,7 @@ router.put('/:tileId', function (req, res, next) {
     'image',
     'notes',
     'address',
+    'helpfulLinks',
     'openingHours',
     'entrance',
     'transit'

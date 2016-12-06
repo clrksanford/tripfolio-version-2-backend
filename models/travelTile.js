@@ -48,6 +48,7 @@ var travelTileSchema = Schema({
 
   openingHours: {
     day1: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -57,6 +58,7 @@ var travelTileSchema = Schema({
       to3: Number
     },
     day2: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -66,6 +68,7 @@ var travelTileSchema = Schema({
       to3: Number
     },
     day3: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -75,6 +78,7 @@ var travelTileSchema = Schema({
       to3: Number
     },
     day4: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -84,6 +88,7 @@ var travelTileSchema = Schema({
       to3: Number
     },
     day5: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -93,6 +98,7 @@ var travelTileSchema = Schema({
       to3: Number
     },
     day6: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -102,6 +108,7 @@ var travelTileSchema = Schema({
       to3: Number
     },
     day7: {
+      value: String,
       closed: Boolean,
       from1: Number,
       to1: Number,
@@ -116,27 +123,44 @@ var travelTileSchema = Schema({
 
   transit: {
     notes: String,
-    link1: {
+    transitLink1: {
       name: String,
       url: String
     },
-    link2: {
-      name: String,
-      url: String
-    },
-    link3: {
-      name: String,
-      url: String
-    },
-    link4: {
-      name: String,
-      url: String
-    },
-    link5: {
+    transitLink2: {
       name: String,
       url: String
     }
-  } // End transit
+  }, // End transit
+
+  /*--- BEGIN LINKS ---*/
+
+  helpfulLinks: {
+    helpfulLink1: {
+      name: String,
+      url: String
+    },
+    helpfulLink2: {
+      name: String,
+      url: String
+    },
+    helpfulLink3: {
+      name: String,
+      url: String
+    },
+    helpfulLink4: {
+      name: String,
+      url: String
+    },
+    helpfulLink5: {
+      name: String,
+      url: String
+    },
+    helpfulLink6: {
+      name: String,
+      url: String
+    }
+  } // End links
 });
 
 var TravelTile = mongoose.model('TravelTile', travelTileSchema);

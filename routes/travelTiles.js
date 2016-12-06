@@ -3,6 +3,22 @@ var router = express.Router();
 var TravelTile = require('../models/travelTile');
 var _ = require('lodash');
 
+
+// router.get('/test', function (req, res, next) {
+//   TravelTile.findById('5846d9d17d185208815005eb')
+//     .populate('_tripId')
+//     .exec(function (err, tile) {
+//       if(err) {
+//         res.status(500).send(err);
+//       } else if (!tile) {
+//         res.status(404).send();
+//       } else {
+//         console.log(tile._tripId.destination);
+//         res.json(tile._tripId);
+//       }
+//     })
+// })
+
 /* Find individual tile by Id */
 router.use('/:tileId', function (req, res, next) {
   TravelTile.findById(req.params.tileId, function (error, tile) {
@@ -49,6 +65,7 @@ router.put('/:tileId', function (req, res, next) {
 router.post('/', function (req, res, next) {
 
   req.body = _.pick(req.body, [
+    '_correspondingTrip',
     'address',
     'creatorId',
     'entrance',

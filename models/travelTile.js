@@ -24,23 +24,23 @@ var travelTileSchema = Schema({
   entrance: {
     entrance1: {
       label: String,
-      price: Number
+      price: String
     },
     entrance2: {
       label: String,
-      price: Number
+      price: String
     },
     entrance3: {
       label: String,
-      price: Number
+      price: String
     },
     entrance4: {
       label: String,
-      price: Number
+      price: String
     },
     entrance5: {
       label: String,
-      price: Number
+      price: String
     }
   }, // End entrance
 

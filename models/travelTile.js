@@ -50,72 +50,72 @@ var travelTileSchema = Schema({
     day1: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     },
     day2: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     },
     day3: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     },
     day4: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     },
     day5: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     },
     day6: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     },
     day7: {
       value: String,
       closed: Boolean,
-      from1: Number,
-      to1: Number,
-      from2: Number,
-      to2: Number,
-      from3: Number,
-      to3: Number
+      from1: String,
+      to1: String,
+      from2: String,
+      to2: String,
+      from3: String,
+      to3: String
     }
   }, // End openingHours
 

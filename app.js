@@ -13,6 +13,7 @@ var routes = require('./routes/index');
 var trips = require('./routes/trips');
 var destinations = require('./routes/destinations');
 var travelTiles = require('./routes/travelTiles');
+var tileByTrip = require('./routes/tileByTrip');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/', routes);
 app.use('/trips', trips);
 app.use('/destinations', destinations);
 app.use('/travel-tiles', travelTiles);
+app.use('/find-tile-by-trip', tileByTrip);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -62,6 +62,17 @@ router.put('/:tileId', function (req, res, next) {
   });
 });
 
+/* DELETE tile */
+router.delete('/:tileId', function (req, res, next) {
+  res.tile.remove(function (err) {
+    if(err) {
+      res.status(500).send(err)
+    } else {
+      res.status(204).send();
+    }
+  })
+})
+
 /* POST new tile */
 router.post('/', function (req, res, next) {
 

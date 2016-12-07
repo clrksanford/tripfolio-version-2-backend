@@ -33,7 +33,7 @@ router.use('/:tileId', function (req, res, next) {
   })
 })
 
-/* GET individual trip */
+/* GET individual tile */
 router.get('/:tileId', function(req, res, next) {
   res.json(res.tile);
 });
